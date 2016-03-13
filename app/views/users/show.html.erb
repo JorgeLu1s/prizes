@@ -1,12 +1,13 @@
-<%= flash[:info] %>
-
-<% if flash[:success] %>
-  <div class="alert alert-success">
-    <strong>Congratulations</strong><%= flash[:success] %>
-  </div>
-<% end %>
-<% if flash[:danger] %>
-  <div class="alert alert-warning">
-    <strong>Sorry</strong><%= flash[:danger] %>
-  </div>
-<% end %>
+<div class="jumbotron">
+  <h2>Thanks for subscribing!</h2>
+  <% if flash[:success] %>
+    <div class="alert alert-success">
+      <strong>Congratulations </strong><%= flash[:success] %>
+    </div>
+  <% end %>
+  <% if flash[:warning] %>
+    <div class="alert alert-warning">
+      <strong>Sorry </strong><%= flash[:warning] %>
+    </div>
+  <% end %>
+</div>
