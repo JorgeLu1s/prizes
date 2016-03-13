@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails_admin'
 #bootstrap
 gem 'bootstrap-sass'
+#observer
+gem 'rails-observers'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

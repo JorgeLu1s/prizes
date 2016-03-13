@@ -113,6 +113,8 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails-observers (0.1.2)
+      activemodel (~> 4.0)
     rails_admin (0.8.1)
       builder (~> 3.1)
       coffee-rails (~> 4.0)
@@ -182,6 +184,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.2.5.2)
+  rails-observers
   rails_admin
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
