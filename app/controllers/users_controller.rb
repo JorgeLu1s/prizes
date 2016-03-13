@@ -9,25 +9,16 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new()
+    puts "-.-.-..-.-..-.-.-.-.- EMAIL: "
+    puts params[:user]
     @user.email = params[:email]
-    @user.save
-    if check_winner(@user) == true
-      flash[:success] = "You won a prize!"
-    else
-      flash[:warning] = "You lose, please try again tomorrow"
-    end
-    redirect_to @user
-  end
-
-  private
-
-  def check_winner(user)
-    @winner = Winner.last
-
-    if user.id == @winner.user.id
-      return true
-    else
-      return false
+    if @user.save
+      if @user.winner? == true
+        flash[:success] = "You won a prize!"
+      else
+        flash[:warning] = "You lose, please try again tomorrow"
+      end
+      redirect_to @user
     end
   end
 
