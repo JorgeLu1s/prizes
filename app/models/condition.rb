@@ -1,3 +1,4 @@
 class Condition < ActiveRecord::Base
-	has_many :prizes
+  belongs_to :condition_type
+  has_many :prizes
 end

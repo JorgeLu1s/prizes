@@ -1,17 +1,17 @@
-<h1>¡Sign Up and win a prize!</h1>
+<div class="jumbotron">
+  <h1>¡Subscribe and win a prize!</h1>
+  <h2>Welcome to prizes store, here you can win amazing prizes only with a subscription.</h2>
 
-<div class="row">
-	<div class="col-md-6 col-md-offset-3">
-    <%= form_for (@user) do |f| %>
+  <div class="row">
+  	<div class="col-md-6 col-md-offset-3">
+      <%= form_for(@user) do |f| %>
 
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
+        <%= f.label :email %>
+        <%= f.text_field :email, class: 'form-control' %>
 
-    <%= f.label :email %>
-    <%= f.text_field :email, class: 'form-control' %>
+        <%= f.submit "Subscribe", class: "btn btn-primary" %>
 
-    <%= f.submit "Sign Up", class: "btn btn-primary" %>
-
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
