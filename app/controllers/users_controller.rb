@@ -9,8 +9,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new()
-    puts "-.-.-..-.-..-.-.-.-.- EMAIL: "
-    puts params[:user]
     @user.email = params[:email]
     if @user.save
       if @user.winner? == true

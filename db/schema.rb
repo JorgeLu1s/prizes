@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160313160937) do
+ActiveRecord::Schema.define(version: 20160313204954) do
 
   create_table "condition_types", force: :cascade do |t|
     t.string   "description"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20160313160937) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.integer  "condition_type_id"
+    t.integer  "second_value"
   end
 
   create_table "prizes", force: :cascade do |t|
