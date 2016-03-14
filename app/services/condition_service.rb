@@ -6,6 +6,8 @@ class ConditionService
     return prize
   end
 
+  #verify if one condition match with the
+  #register of the subscriber
   def match_conditions(id, conditions)
     prize = false
     conditions.each do |condition|
@@ -23,6 +25,7 @@ class ConditionService
           return condition.prizes[0]
         end
       end
+      #if one condition match then finish with the cycle
       break if prize != false
     end
 
