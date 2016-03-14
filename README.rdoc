@@ -5,3 +5,10 @@ Prizes is a web application to assign prizes to specific visitors of a page afte
 How to use:
 
 You must add some conditions and assign a prize for every condition, each condition belongs to a condtion type, in this first phase of the appliction the condition types are predefined, so you can only add three types of conditions.
+
+The "second value" column in conditions table, only is necessary if you choose a condition type three.
+
+The default admin credentials are:
+
+username: admin@example.com
+password: password
