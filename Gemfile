@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 #RailsAdmin
 gem 'rails_admin'
+gem 'devise', '~> 3.5', '>= 3.5.6'
 #bootstrap
 gem 'bootstrap-sass'
 #observer

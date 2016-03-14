@@ -1,27 +1,31 @@
 class ConditionService
 
   def prize_won(id)
-    @conditions = Condition.all
-    @conditions.each do |condition|
-      @prize_won = match_conditions(id, condition)
-    end
-    return @prize_won
+    conditions = Condition.all
+    prize = match_conditions(id, conditions)
+    return prize
   end
 
-  def match_conditions(id, condition)
-    case condition.condition_type.id
-    when 1
-      if id == condition.value
-        return true
+  def match_conditions(id, conditions)
+    prize = false
+    conditions.each do |condition|
+      case condition.condition_type.id
+      when 1
+        if id == condition.value
+          return condition.prizes[0]
+        end
+      when 2
+        if id % condition.value == 0
+          return condition.prizes[0]
+        end
+      when 3
+        if (id % condition.value == 0) && id > condition.second_value
+          return condition.prizes[0]
+        end
       end
-    when 2
-      if id % condition.value == 0
-        return true
-      end
-    when 3
-      if (id % condition.value == 0) && id > condition.second_value
-        return true
-      end
+      break if prize != false
     end
+
+    return prize
   end
 end

@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :users, :winners, :conditions, :prizes
 
   root to: "users#new"
+
+  #devise_for :admin
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
